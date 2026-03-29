@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melizza Services | Redirection...</title>
+    <meta name="robots" content="noindex, follow">
+    <!-- Fallback si Javascript está desactivado -->
+    <meta http-equiv="refresh" content="0; url=index-fr.html">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8fafc;
+            color: #0f172a;
+            margin: 0;
+        }
+        .spinner {
+            border: 4px solid rgba(0, 0, 0, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border-left-color: #00E5FF;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+    <script>
+        // Redirección inteligente basada en el idioma del navegador
+        window.onload = function() {
+            var userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('es')) {
+                window.location.replace('index-es.html');
+            } else if (userLang.startsWith('en')) {
+                window.location.replace('index-en.html');
+            } else {
+                // Por defecto a Francés porque el negocio está en La Rochelle
+                window.location.replace('index-fr.html');
+            }
+        };
+    </script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <div class="spinner" style="margin: 0 auto 1rem;"></div>
+        <p>Redirigiendo a tu idioma...</p>
+        <p style="font-size: 0.8rem; opacity: 0.6;">Si no ocurre nada, <a href="index-fr.html" style="color: #00E5FF;">pulsa aquí</a>.</p>
+    </div>
+</body>
+</html>
