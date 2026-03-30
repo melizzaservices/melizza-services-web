@@ -2,7 +2,12 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (href === '#') {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+        const target = document.querySelector(href);
         if(target) target.scrollIntoView({ behavior: 'smooth' });
     });
 });
@@ -10,7 +15,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* Control de Modal CRO */
 function openModal() {
     document.getElementById('bookingModal').classList.add('active');
-    document.getElementById('focusName').focus(); // Foco en el primer input por accesibilidad
+    document.getElementById('modalName').focus(); // Foco en el primer input por accesibilidad
 }
 
 function closeModal() {
