@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sitio en mantenimiento — Melizza Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      background: #0a0a0a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      padding: 2rem;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 520px;
+      width: 100%;
+    }
+
+    /* Logo */
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: #c9a84c;
+      text-transform: uppercase;
+      margin-bottom: 52px;
+    }
+
+    .logo svg {
+      flex-shrink: 0;
+    }
+
+    /* Gear icon */
+    .gear-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 28px;
+    }
+
+    .gear {
+      animation: spin 8s linear infinite;
+      transform-origin: center;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* Heading */
+    h1 {
+      font-size: clamp(32px, 6vw, 44px);
+      font-weight: 300;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    h1 span {
+      color: #c9a84c;
+      font-weight: 600;
+    }
+
+    /* Divider */
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: #c9a84c;
+      margin: 24px auto;
+    }
+
+    /* Body text */
+    p {
+      font-size: 15px;
+      font-weight: 300;
+      color: #999999;
+      line-height: 1.9;
+      margin-bottom: 40px;
+    }
+
+    /* Status badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201, 168, 76, 0.08);
+      border: 1px solid rgba(201, 168, 76, 0.28);
+      color: #c9a84c;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      padding: 10px 22px;
+      border-radius: 4px;
+    }
+
+    .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #c9a84c;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.25; }
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      font-size: 11px;
+      color: #333333;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Logo -->
+    <div class="logo">
+      <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 3L4 9v14l12 6 12-6V9L16 3z"
+              stroke="#c9a84c" stroke-width="1.5"
+              fill="rgba(201,168,76,0.08)"/>
+        <path d="M16 3v26M4 9l12 6 12-6"
+              stroke="#c9a84c" stroke-width="1" opacity="0.45"/>
+      </svg>
+      Melizza Services
+    </div>
+
+    <!-- Gear -->
+    <div class="gear-wrap">
+      <svg class="gear" width="52" height="52" viewBox="0 0 52 52"
+           fill="none" aria-hidden="true">
+        <circle cx="26" cy="26" r="9" stroke="#c9a84c" stroke-width="1.5"/>
+        <path d="M26 8v4M26 40v4M8 26h4M40 26h4
+                 M12.1 12.1l2.8 2.8M37.1 37.1l2.8 2.8
+                 M12.1 39.9l2.8-2.8M37.1 14.9l2.8-2.8"
+              stroke="#c9a84c" stroke-width="2"
+              stroke-linecap="round" opacity="0.55"/>
+      </svg>
+    </div>
+
+    <!-- Heading -->
+    <h1>Sitio en<br><span>mantenimiento</span></h1>
+
+    <div class="divider"></div>
+
+    <p>
+      Estamos mejorando nuestra plataforma para ofrecerte<br>
+      una experiencia aún mejor.<br>
+      Volveremos muy pronto.
+    </p>
+
+    <!-- Status badge -->
+    <div class="badge">
+      <div class="dot"></div>
+      Trabajando en ello
+    </div>
+
+    <footer>melizzaservices.com</footer>
+
+  </div>
+</body>
+</html>
